@@ -42,6 +42,10 @@ see the appendix for what each price represents.
 
 #set text(9pt)
 #pagebreak()
+#include "physical.typ"
+
+#set text(9pt)
+#pagebreak()
 = Method
 
 #include "method.typ"
@@ -63,6 +67,6 @@ see the appendix for what each price represents.
     [#r.architecture \ #r.form_factor \ #r.launch_year],
     r.confidence,
     r.price_basis,
-    r.sources.split(";").map(s => s.trim()).filter(s => s != "").map(s => link(s, s)).join(linebreak()),
+    [#r.sources.split(";").map(s => s.trim()).filter(s => s != "").map(s => link(s, s)).join(linebreak()) \ _Physical/power (#r.confidence_physical):_ \ #r.sources_physical.split(";").map(s => s.trim()).filter(s => s != "").map(s => link(s, s)).join(linebreak())],
   )).flatten(),
 )

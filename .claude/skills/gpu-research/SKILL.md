@@ -39,6 +39,13 @@ question is a new folder with a new date; never overwrite an older snapshot.
    (see the script docstring). Spot-check outliers (prices off by 10x, a scarcity score
    that contradicts the clouds column) and fix in the batch file, then re-merge.
 4. **Tier.** For GPU tables, `uv run --no-project python scripts/apply_tiers.py rubrics/gpu-four-tier.json <dir>/data.csv` adds VRAM, cost and scarcity tiers (1-4). Change thresholds only by bumping the rubric's `version` (date), since old snapshots cite it.
+4b. **Enrich (optional).** Extra columns researched later for the same snapshot go in
+   `work/<topic>-*.csv` keyed by the exact `gpu` value, then
+   `uv run --no-project python scripts/join_csv.py --key gpu <dir>/data.csv <dir>/work/<topic>-*.csv`
+   (in place, idempotent, fails on any key mismatch). Agents tend to copy context in brackets
+   into the key, so check the key before joining. Run it after merge/tiers, because merge rebuilds
+   data.csv from the batch files. Noise: passive datacenter GPUs need *host system* acoustics
+   (Dell PowerEdge technical guides publish LpA tables; NVIDIA DGX guides mostly do not).
 5. **Meta.** Write `meta.json` with `date` = today, `researched_by` = "Claude Code",
    `model` = the model ID doing the run.
 6. **Render.** Copy the newest `research/*/report.typ` as a starting point, adapt columns,

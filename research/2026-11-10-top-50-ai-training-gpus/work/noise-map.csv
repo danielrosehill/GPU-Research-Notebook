@@ -1,0 +1,51 @@
+gpu,noise_system_dba
+AMD Instinct MI350X,
+AMD Instinct MI355X,
+NVIDIA B300 (HGX B300),~63-64 (proxy: Dell XE9680L B200 liquid-assisted)
+NVIDIA GB300 (GB300 NVL72 per-GPU),up to 82.9 (Lenovo GB300 NVL72 rack spec)
+AMD Instinct MI325X,"~77 (proxy: XE9680 air, 100% GPU, 25C MI300X)"
+AMD Instinct MI300X,"77 (XE9680 air, 100% GPU, 25C)"
+NVIDIA GB200 (GB200 NVL72 per-GPU),~82.9 (proxy: Lenovo GB300 NVL72 rack)
+NVIDIA B200 (HGX B200),"63-64 (Dell XE9680L/XE9685L liquid-assisted, 25C)"
+NVIDIA H200 NVL,~75 (proxy: Dell XE7740 8x H100 NVL)
+NVIDIA H200 SXM,"82 (XE9680 air, 100% GPU, 25C); 62 XE9680L liquid-assisted"
+AMD Instinct MI250,
+AMD Instinct MI250X,
+AMD Instinct MI300A,
+Huawei Ascend 910C,
+Intel Data Center GPU Max 1550,
+Intel Gaudi 3,
+Intel Gaudi 2,
+NVIDIA GH200 Grace Hopper,
+NVIDIA H20,"~82 (proxy: XE9680 air, 100% GPU, 25C H100 board)"
+NVIDIA RTX PRO 6000 Blackwell (Workstation + Server editions),
+NVIDIA H100 NVL,"75 (Dell XE7740/XE7745, 8 cards, 25C)"
+NVIDIA A100 PCIe 80GB,66-68.3 (Dell R760xa 4 cards / Lenovo SR675 V3)
+NVIDIA A100 SXM 80GB,"84 (XE9680 air, 100% GPU, 25C)"
+NVIDIA A800 80GB,~66-68 (proxy: A100 PCIe servers)
+NVIDIA H100 PCIe,"71.3 (Lenovo SR675 V3, 4 cards)"
+NVIDIA H100 SXM,"82 (XE9680 air, 100% GPU, 25C); 71.2 XE8640 4-GPU; 74.8 Lenovo SR675 V3"
+NVIDIA H800,"~82 (proxy: XE9680 air, 100% GPU, 25C H100 board)"
+AMD Instinct MI210,
+Huawei Ascend 910B,
+NVIDIA A40,"~66-68 (proxy: 2U/4U 4-GPU passive PCIe server, Dell R760xa / Lenovo SR675 V3 A100)"
+NVIDIA L20,"~66-68 (proxy: 2U/4U 4-GPU passive PCIe server, Dell R760xa / Lenovo SR675 V3 A100)"
+NVIDIA L40,"~66-68 (proxy: 2U/4U 4-GPU passive PCIe server, Dell R760xa / Lenovo SR675 V3 A100)"
+NVIDIA L40S,"~66-68 (proxy: 2U/4U 4-GPU passive PCIe server, Dell R760xa / Lenovo SR675 V3 A100)"
+NVIDIA Quadro RTX 8000,
+NVIDIA RTX 6000 Ada,
+NVIDIA RTX A6000,
+NVIDIA A100 40GB,~84 SXM (proxy: XE9680 A100); ~66-68 PCIe (proxy: R760xa/SR675 V3)
+NVIDIA GeForce RTX 5090,
+NVIDIA RTX 5000 Ada Generation,
+NVIDIA V100 32GB,
+NVIDIA A10,~58 (proxy: R760xa 1x A30)
+NVIDIA A10G (AWS variant),
+NVIDIA A30,"58 (Dell R760xa, 1 card, quietest config)"
+NVIDIA GeForce RTX 3090,
+NVIDIA GeForce RTX 4090,
+NVIDIA L4,"72 (Dell XE7740/XE7745, 8-16 cards, 25C)"
+NVIDIA RTX A5000,
+NVIDIA P100 16GB,
+NVIDIA T4,~72 (proxy: Dell XE7740 dense L4)
+NVIDIA V100 16GB,

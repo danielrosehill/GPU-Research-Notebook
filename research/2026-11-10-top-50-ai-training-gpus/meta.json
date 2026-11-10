@@ -1,0 +1,8 @@
+{
+  "title": "Top 50 GPUs for AI Training: VRAM, Price, Scarcity and Availability",
+  "subtitle": "Ordered by VRAM (most to least), then manufacturer. Snapshot of the global market.",
+  "date": "2026-11-10",
+  "researched_by": "Claude Code",
+  "model": "claude-opus-5-5, research agents on Sonnet",
+  "valid_note": "Treat as stale after ~60 days."
+}

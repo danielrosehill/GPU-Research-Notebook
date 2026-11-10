@@ -8,6 +8,7 @@ A mini notebook for researching GPUs: specs, comparisons, pricing, availability 
 - `research/YYYY-MM-DD-slug/` — structured research runs: `data.csv` + Typst `report.pdf`, dated and marked as researched by Claude Code.
 - `.claude/skills/gpu-research/` — the end-to-end skill for those runs (research → CSV → PDF).
 - `templates/research-report.typ` — shared Typst template (date banner, header, footer, scarcity colouring).
+- `rubrics/gpu-four-tier.json` — four-tier rubric (VRAM, cost, scarcity; 1 = least, 4 = most), applied by `scripts/apply_tiers.py`.
 - `scripts/merge_csv.py` — merges per-agent batch CSVs, adds composite columns, sorts and ranks.
 
 ## Research index

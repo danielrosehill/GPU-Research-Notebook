@@ -38,6 +38,10 @@ see the appendix for what each price represents.
 
 #set text(9pt)
 #pagebreak()
+#include "tiers.typ"
+
+#set text(9pt)
+#pagebreak()
 = Method
 
 #include "method.typ"

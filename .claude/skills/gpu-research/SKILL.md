@@ -38,12 +38,13 @@ question is a new folder with a new date; never overwrite an older snapshot.
    --sort ... [--mean name=a,b,c] [--rank rank] <dir>/work/batch-*.csv`
    (see the script docstring). Spot-check outliers (prices off by 10x, a scarcity score
    that contradicts the clouds column) and fix in the batch file, then re-merge.
-4. **Meta.** Write `meta.json` with `date` = today, `researched_by` = "Claude Code",
+4. **Tier.** For GPU tables, `uv run --no-project python scripts/apply_tiers.py rubrics/gpu-four-tier.json <dir>/data.csv` adds VRAM, cost and scarcity tiers (1-4). Change thresholds only by bumping the rubric's `version` (date), since old snapshots cite it.
+5. **Meta.** Write `meta.json` with `date` = today, `researched_by` = "Claude Code",
    `model` = the model ID doing the run.
-5. **Render.** Copy the newest `research/*/report.typ` as a starting point, adapt columns,
-   then `typst compile --root . <dir>/report.typ` from the repo root. Open the PDF
+6. **Render.** Copy the newest `research/*/report.typ` as a starting point, adapt columns,
+   include `tiers.typ` if tiers were applied, then `typst compile --root . <dir>/report.typ` from the repo root. Open the PDF
    (or `pdftotext`) to check nothing overflows.
-6. **Ship.** Commit the folder and push.
+7. **Ship.** Commit the folder and push.
 
 ## Conventions
 

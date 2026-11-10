@@ -1,0 +1,37 @@
+{
+  "name": "gpu-four-tier",
+  "version": "2026-11-10",
+  "convention": "Tier 1 = least of the attribute, tier 4 = most. Bounds are inclusive lower, exclusive upper (min <= x < max). Blank input -> blank tier.",
+  "dimensions": {
+    "vram": {
+      "column": "vram_tier",
+      "source": "vram_gb (per GPU)",
+      "tiers": [
+        {"tier": 1, "label": "Entry",    "min": 0,   "max": 48,  "meaning": "Fine-tuning small models, LoRA, inference of <=13B; consumer and legacy cards"},
+        {"tier": 2, "label": "Mid",      "min": 48,  "max": 96,  "meaning": "Workhorse training: 7-70B with sharding; A100/H100/L40S class"},
+        {"tier": 3, "label": "High",     "min": 96,  "max": 180, "meaning": "Large-model training and long context on fewer GPUs; H200, MI210-MI300A, Gaudi"},
+        {"tier": 4, "label": "Frontier", "min": 180, "max": null, "meaning": "Frontier-scale training; Blackwell and MI300X/MI3xx class"}
+      ]
+    },
+    "cost": {
+      "column": "cost_tier",
+      "source": "cost_mid_usd = mean of new_price_usd_low and new_price_usd_high (or whichever is present)",
+      "tiers": [
+        {"tier": 1, "label": "Budget",  "min": 0,     "max": 5000,  "meaning": "Consumer and entry workstation/inference cards"},
+        {"tier": 2, "label": "Mid",     "min": 5000,  "max": 15000, "meaning": "Workstation and previous-gen data-centre cards"},
+        {"tier": 3, "label": "High",    "min": 15000, "max": 40000, "meaning": "Current-gen Hopper-class data-centre GPUs"},
+        {"tier": 4, "label": "Premium", "min": 40000, "max": null,  "meaning": "Blackwell-class, usually only sold in 8-GPU boards or racks"}
+      ]
+    },
+    "scarcity": {
+      "column": "scarcity_tier",
+      "source": "scarcity_composite (mean of the three 1-5 channel indexes)",
+      "tiers": [
+        {"tier": 1, "label": "Abundant",    "min": 1.0, "max": 2.0, "meaning": "Rent or buy anywhere, today"},
+        {"tier": 2, "label": "Available",   "min": 2.0, "max": 3.0, "meaning": "Obtainable with some shopping around or quota requests"},
+        {"tier": 3, "label": "Constrained", "min": 3.0, "max": 4.0, "meaning": "Few providers, sales-led, waitlists or regional limits"},
+        {"tier": 4, "label": "Scarce",      "min": 4.0, "max": null, "meaning": "Effectively unobtainable for most buyers (EOL, export-restricted, HPC-only)"}
+      ]
+    }
+  }
+}
